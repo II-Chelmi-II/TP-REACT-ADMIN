@@ -1,7 +1,12 @@
-import { Edit, SimpleForm, TextInput } from 'react-admin';
+import { Edit, SimpleForm, TextInput, useRecordContext } from 'react-admin';
+
+const PageTitle = () => {
+    const record = useRecordContext();
+    return <>Edit "{record?.name}"</>;
+}
 
 export const UserEdit = () => (
-    <Edit>
+    <Edit title={<PageTitle />}>
         <SimpleForm>
             <TextInput source="name" />
             <TextInput source="username" />

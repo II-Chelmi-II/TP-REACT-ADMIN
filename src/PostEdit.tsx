@@ -1,7 +1,7 @@
 import { Edit, ReferenceInput, SimpleForm, TextInput } from 'react-admin';
 
 export const PostEdit = () => (
-    <Edit>
+    <Edit title="Edit Post">
         <SimpleForm>
             <TextInput source="title" />
             <TextInput source="body" />
