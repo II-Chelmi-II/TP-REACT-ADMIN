@@ -6,7 +6,7 @@ const PageTitle = () => {
 }
 
 export const UserEdit = () => (
-    <Edit title={<PageTitle />}>
+    <Edit title={<PageTitle />} mutationMode='pessimistic'>
         <SimpleForm>
             <TextInput source="name" />
             <TextInput source="username" />
